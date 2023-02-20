@@ -32,22 +32,13 @@ namespace API
 
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        // ham nay de cau hinh dich vu
+        // ham nay de khai bao services, dependancy
         public void ConfigureServices(IServiceCollection services)
         {
-            // add config vao service
             services.AddApplicationServices(_config);
-            // them pham vi vao token
-            services.AddScoped<ITokenService,TokenService>();
 
-            // tao ket noi vao db , defaultconnection trong file app.settings.development.json
-            services.AddDbContext<DataContext>(options => {
-                options.UseSqlite(_config.GetConnectionString("DefaultConnection"));
-            });
-            
             services.AddControllers();
 
-            // them core de cho api voi server cung origin
             services.AddCors();
             services.AddIdentityServices(_config);
             services.AddSwaggerGen(c =>
@@ -58,6 +49,7 @@ namespace API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        //ham nay dung de cau hiinh 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

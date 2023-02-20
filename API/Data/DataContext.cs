@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Data
 {
+    //ket noi giua database voi entities
     public class DataContext : DbContext
     {
     
