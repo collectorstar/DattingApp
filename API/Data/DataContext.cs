@@ -13,5 +13,6 @@ namespace API.Data
 
             // tao cau noi giua app va csdl
         public DbSet<AppUser> Users { get; set; }
+        
     }
 }
