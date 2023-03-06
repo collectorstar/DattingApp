@@ -11,7 +11,7 @@ import { Member } from 'src/app/_models/member';
 export class MemberListComponent implements OnInit{
   members$: Observable<Member[]>;
 
-  constructor(private memberService: MembersService){
+constructor(private memberService: MembersService){
 
   }
 
