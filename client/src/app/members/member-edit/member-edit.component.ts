@@ -16,6 +16,8 @@ export class MemberEditComponent implements OnInit{
   @ViewChild('editForm') editForm: NgForm;
   member: Member;
   user: User;
+
+  //cai nay de lang nghe may chu khi muon di chuyển đi link khác
   @HostListener('window:beforeunload',['$event']) unloadNotification($event: any){
     if(this.editForm.dirty){
       $event.returnValue = true;
