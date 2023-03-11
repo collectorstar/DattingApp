@@ -15,14 +15,14 @@ namespace API.Data.Migrations
                 name: "City",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "Country",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<DateTime>(
@@ -43,28 +43,28 @@ namespace API.Data.Migrations
                 name: "Gender",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "Interests",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "Introduction",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "KnownAs",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<DateTime>(
@@ -78,7 +78,7 @@ namespace API.Data.Migrations
                 name: "LookingFor",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.CreateTable(
@@ -90,7 +90,7 @@ namespace API.Data.Migrations
                     Url = table.Column<string>(type: "TEXT", nullable: true),
                     IsMain = table.Column<bool>(type: "INTEGER", nullable: false),
                     PublicId = table.Column<string>(type: "TEXT", nullable: true),
-                    AppUserId = table.Column<int>(type: "INTEGER", nullable: true)
+                    AppUserId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -99,7 +99,8 @@ namespace API.Data.Migrations
                         name: "FK_Photos_Users_AppUserId",
                         column: x => x.AppUserId,
                         principalTable: "Users",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

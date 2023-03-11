@@ -1,3 +1,4 @@
+import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
@@ -26,7 +27,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { TextInputComponent } from './_forms/text-input/text-input.component';
+import { DateInputComponent } from './_forms/date-input/date-input.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { TextInputComponent } from './_forms/text-input/text-input.component';
     MemberEditComponent,
     PhotoEditorComponent,
     TextInputComponent,
+    DateInputComponent,
   ],
   imports: [
     BrowserModule,
