@@ -14,7 +14,7 @@
   </div>
 
   <div *ngIf="control.errors?.maxlength" class="invalid-feedback">
-    {{label}} must be at most {{ngControl.control.errors.minlength['requiredLength']}}
+    {{label}} must be at most {{ngControl.control.errors.maxlength['requiredLength']}}
   </div>
 
   <div *ngIf="control.errors?.isMatching" class="invalid-feedback">
