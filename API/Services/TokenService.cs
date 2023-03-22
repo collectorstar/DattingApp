@@ -25,7 +25,7 @@ namespace API.Services
                 new Claim(JwtRegisteredClaimNames.UniqueName,user.UserName),
             };
 
-            //thong tin nguoi dung
+            //khóa bí mật
             var creds = new SigningCredentials(_key,SecurityAlgorithms.HmacSha512Signature);
             
             //mo ta token

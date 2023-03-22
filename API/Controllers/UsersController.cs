@@ -12,7 +12,7 @@ namespace API.Controllers
     [Authorize]
     public class UsersController : BaseApiController
     {
-        public readonly IUserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly IPhotoService _photoService;
         public UsersController(IUserRepository userRepository,IMapper mapper,IPhotoService photoService)
