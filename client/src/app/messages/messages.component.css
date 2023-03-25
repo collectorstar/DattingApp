@@ -1,0 +1,13 @@
+.img-cricle{
+  max-height: 50px;
+}
+
+
+.btn.btn-danger{
+  background-color: #b81f14;
+  opacity: 0.8;
+}
+
+.btn.btn-danger:hover{
+  opacity: 1;
+}

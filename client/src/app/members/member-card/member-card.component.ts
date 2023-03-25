@@ -12,7 +12,6 @@ export class MemberCardComponent implements OnInit{
   @Input() member: Member
 
   constructor(private membersService:MembersService,private toastr: ToastrService){
-
   }
 
   ngOnInit(): void {
