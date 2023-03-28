@@ -1,0 +1,13 @@
+.btn.btn-info{
+  background-color: #148a9c;
+  opacity: 0.8;
+}
+
+.btn.btn-info:hover{
+  opacity: 1;
+}
+
+.myself td{
+  padding:10px
+}
+

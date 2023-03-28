@@ -18,7 +18,6 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 
-import { SharedModule } from './_models/shared.module';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
@@ -29,6 +28,12 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { HasRoleDirective } from './_derectives/has-role.directive';
+import { SharedModule } from './_models/shared.module';
+import { UserManagemantComponent } from './admin/user-managemant/user-managemant.component';
+import { PhotoManagemantComponent } from './admin/photo-managemant/photo-managemant.component';
+import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
 
 
 @NgModule({
@@ -50,6 +55,11 @@ import { MemberMessagesComponent } from './members/member-messages/member-messag
     TextInputComponent,
     DateInputComponent,
     MemberMessagesComponent,
+    AdminPanelComponent,
+    HasRoleDirective,
+    UserManagemantComponent,
+    PhotoManagemantComponent,
+    RolesModalComponent,
   ],
   imports: [
     BrowserModule,
